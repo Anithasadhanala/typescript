@@ -105,6 +105,25 @@ enum staticValue {
 }
 
 
+// Interface 
+interface Users {
+    name: string,
+    age: number,
+    getAddress(pinCode: number): string,   // function to be implemented
+    getDetails: () => number
+}
+let user1: Users = {
+    name: "anitha",  age: 26, 
+    getAddress: (code: 533291) => {  // here we are also naming the params not like normal function
+        return "done"
+    },
+    getDetails: ()=>{
+        return 100
+    }
+}
+interface Role extends Users{              // inheritance in Interface
+    roles: "Admin" | "Manager" | "Learner"
+}
 
 
 

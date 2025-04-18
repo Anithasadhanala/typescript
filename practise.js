@@ -40,10 +40,29 @@ function demoWithDefaults(action, flag) {
 function returnObj() {
     return {};
 }
-// 
-function demoWithObjects(_a) {
-    var string = _a.name;
-    console.log("I am done.");
+// function accepts the multiple params in obj.
+function returnObj2(_a) {
+    var string = _a.name, number = _a.salary;
+    return {};
 }
-var object = { name: "anitha", age: 26 };
-demoWithDefaults(object);
+function demoMultipleArray(object) {
+    console.log(object);
+}
+// Arrays 
+var arr = [];
+// union
+var num2;
+// example
+var airPlaneSeat; // just like ROR freeze var
+airPlaneSeat = "secondClass";
+// Tuples (tuples give restriction on how the value of the Dtype are stored - order of the Dtype values)
+var tUser = [2, "Hi"]; // here we cannot change the order the data
+// Also here we might change the tuple definition by altering the Dtype with inbuild functions
+// such as the push(), pop(), etc..
+// Enum (there are multiple ways to define this)
+// use const if you don't modify in further code.
+var staticValue;
+(function (staticValue) {
+    staticValue["VAL1"] = "val1";
+    staticValue["vAL2"] = "val2";
+})(staticValue || (staticValue = {}));
